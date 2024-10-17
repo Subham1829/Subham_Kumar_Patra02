@@ -1,0 +1,96 @@
+/* some basic elements */
+body, h1, h2, p, ul, li {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:cursive;
+}
+
+/* Basic styling */
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background-image: url("https://img.freepik.com/premium-photo/yellow-school-bus-vector-illustration-concept-transportation-vehicle-school-education-vector-illustration_864588-255610.jpg?w=1380");
+
+}
+
+/* Header styling */
+header {
+  background-color:rgb(120, 6, 120); /* Red color */
+  color:gold;
+  padding: 1rem 0;
+}
+
+header .container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 2rem;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+}
+
+header nav ul li {
+  margin-left: 20px;
+}
+
+header nav ul li a {
+  color:gold;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+/* Hero section styling */
+.hero {
+  background: url('https://img.freepik.com/premium-photo/city-school-bus-painted-yellow-driving-through-urban-streets-sunny-day-concept-bus-school-yellow-urban-sunny_864588-251310.jpg?w=1380') no-repeat center center/cover;
+  color:rgb(1, 22, 26);
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  background-color:slateblue;
+  color: white;
+  padding: 0.75rem 2rem;
+  text-decoration: none;
+  font-size: 1.1rem;
+  border-radius: 5px;
+}
+
+.cta-button:hover {
+  background-color:green;
+  
+}
+
+/* Footer styling */
+footer {
+  background-color:black;
+  color:white;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+footer .container {
+  width: 80%;
+  margin: 0 auto;
+}
+

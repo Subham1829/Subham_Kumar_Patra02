@@ -1,0 +1,157 @@
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: georgian inside url('/media/examples/rocket.svg');
+    border-top-left-radius: 10px 10px;
+    border-top-right-radius: 10px 10px;
+    border-bottom-left-radius: 10px 10px;
+    border-bottom-right-radius: 10px 10px;
+    border: black 10px double;
+    background-clip: content-box;
+    box-sizing: border-box;
+    width: 100%;
+    border: solid blueviolet;
+    padding: 2px;
+    background-color:lightblue;
+    background-size: contain;
+}
+
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    color:black;
+    line-height: 1.6;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-image: url(https://img.freepik.com/free-vector/background-realistic-abstract-technology-particle_23-2148431735.jpg?t=st=1725330495~exp=1725334095~hmac=81c3c42dfd3e8b7b8eeeb6e0f62291cbeabfe90a8aad9cf026d4a23a9fb3583d&w=1060)
+}
+
+/* Header styling */
+header {
+    font-style: oblique 80deg;
+    color:black;
+    padding: 1rem 0;
+    text-align: center;
+    font-style: oblique;
+}
+
+header .container {
+    font-style: oblique 40deg;
+    width: 80%;
+    margin: 0 auto;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+header .tagline {
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+/* Section styling */
+section {
+    padding: 4rem 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* About section */
+.about {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.about img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+.bio {
+    max-width: 600px;
+}
+
+.bio h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Skills section */
+.skills ul {
+    list-style: none;
+    display: flex;
+    flex-wrap:wrap;
+    gap: 10px;
+    padding: 0;
+}
+
+.skills ul li {
+    background: skyblue;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Projects section */
+.projects .project {
+    margin-bottom: 2rem;
+}
+
+.projects img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+}
+
+.projects h3 {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+/* Resume section */
+.resume a {
+    color: #e60012;
+    text-decoration: none;
+}
+
+.resume a:hover {
+    text-decoration: underline;
+}
+
+/* Contact section */
+.contact a {
+    color: #e60012;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+/* Footer styling */
+footer {
+    color:black;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+footer .container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+footer a {
+    color: #e60012;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}

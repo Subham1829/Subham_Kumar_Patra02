@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+    <link rel="stylesheet" href="Stopwatch_Web_Application.CSS">
+</head>
+<body>
+    <div class="stopwatch">
+        <h1>Stopwatch</h1>
+        <div class="time-display" id="time-display">00:00:00.000</div>
+        <div class="buttons">
+            <button id="startBtn">Start</button>
+            <button id="stopBtn">Stop</button>
+            <button id="resetBtn">Reset</button>
+        </div>
+    </div>
+<script>let startTime = 0;
+    let elapsedTime = 0;
+    let intervalId;
+    let isRunning = false;
+    
+    const timeDisplay = document.getElementById('time-display');
+    const startBtn = document.getElementById('startBtn');
+    const stopBtn = document.getElementById('stopBtn');
+    const resetBtn = document.getElementById('resetBtn');
+    
+    // Format time as hh:mm:ss:ms
+    function formatTime(time) {
+        const milliseconds = Math.floor(time % 1000);
+        const seconds = Math.floor((time / 1000) % 60);
+        const minutes = Math.floor((time / (1000 * 60)) % 60);
+        const hours = Math.floor((time / (1000 * 60 * 60)) % 24);
+    
+        const ms = milliseconds.toString().padStart(3, '0');
+        const s = seconds.toString().padStart(2, '0');
+        const m = minutes.toString().padStart(2, '0');
+        const h = hours.toString().padStart(2, '0');
+    
+        return `${h}:${m}:${s}.${ms}`;
+    }
+    
+    // Start the stopwatch
+    function startStopwatch() {
+        if (!isRunning) {
+            startTime = Date.now() - elapsedTime;
+            intervalId = setInterval(updateTime, 10); // update every 10ms
+            isRunning = true;
+        }
+    }
+    
+    // Stop the stopwatch
+    function stopStopwatch() {
+        if (isRunning) {
+            clearInterval(intervalId);
+            elapsedTime = Date.now() - startTime;
+            isRunning = false;
+        }
+    }
+    
+    // Reset the stopwatch
+    function resetStopwatch() {
+        clearInterval(intervalId);
+        isRunning = false;
+        startTime = 0;
+        elapsedTime = 0;
+        timeDisplay.textContent = '00:00:00.000';
+    }
+    
+    // Update the time display
+    function updateTime() {
+        const time = Date.now() - startTime;
+        timeDisplay.textContent = formatTime(time);
+    }
+    
+    // Event Listeners
+    startBtn.addEventListener('click', startStopwatch);
+    stopBtn.addEventListener('click', stopStopwatch);
+    resetBtn.addEventListener('click', resetStopwatch);
+    </script>
+    <!-- <script src="script.js"></script> -->
+</body>
+</html>
